@@ -33,6 +33,7 @@ from torch.autograd import Variable
 from tqdm import tqdm
 from torch.utils.data import Dataset
 #from srcnn.net import *
+from net import *
 from utils import *
 import json
 from msanomalydetector.util import average_filter

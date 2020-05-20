@@ -25,7 +25,8 @@ POSSIBILITY OF SUCH DAMAGE.
 """
 
 import os
-from srcnn.competition_metric import get_variance, evaluate_for_all_series
+#from srcnn.competition_metric import get_variance, evaluate_for_all_series
+from competition_metric import get_variance, evaluate_for_all_series
 import time
 import json
 import argparse
@@ -52,7 +53,7 @@ def get_path(data_source):
         trainfiles = [dir_ + _ for _ in os.listdir(dir_)]
         files = trainfiles
     else:
-        dir_ = root + '/' + data_source + '/'
+        dir_ = data_source + '/'
         files = [dir_ + _ for _ in os.listdir(dir_)]
     return files
 

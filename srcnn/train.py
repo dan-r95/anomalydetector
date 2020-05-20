@@ -29,6 +29,7 @@ from utils import *
 import numpy as np
 import os
 import time
+import torch
 
 
 def auto(epoch):
@@ -71,7 +72,8 @@ if __name__ == '__main__':
     }
     model = args.model
     root_path = os.getcwd()
-    train_data_path = root_path + '/' + data + '_' + str(window) + '_train.json'
+    #train_data_path = root_path + '/' + data + '_' + str(window) + '_train.json'
+    train_data_path = data + '_' + str(window) + '_train.json'
     model_path = root_path + '/' + args.save + '/'
     if args.load:
         load_path = root_path + '/' + args.load
