@@ -25,11 +25,13 @@ POSSIBILITY OF SUCH DAMAGE.
 """
 
 import argparse
-from srcnn.utils import *
+#from srcnn.utils import *
+from utils import * 
 import os
 import time
 from msanomalydetector.util import average_filter
-
+import numpy as np
+import json
 
 class gen():
     def __init__(self, win_siz, step, nums):
@@ -88,7 +90,8 @@ def auto(dic):
 
 
 def get_path(data):
-    dir_ = os.getcwd() + '/' + data + '/'
+    #dir_ = os.getcwd() + '/' + data + '/'
+    dir_  = data + '/'
     fadir = [_ for _ in os.listdir(dir_)]
     print(fadir, 'fadir')
     files = []
@@ -110,7 +113,9 @@ if __name__ == '__main__':
     auto(vars(args).items())
     files = get_path(args.data)
 
-    train_data_path = os.getcwd() + '/' + args.data + '_' + str(args.window) + '_train.json'
+    #train_data_path = os.getcwd() + '/' + args.data + '_' + str(args.window) + '_train.json'
+    train_data_path = args.data + '_' + str(args.window) + '_train.json'
+  
     total_time = 0
     results = []
     print("generating train data")

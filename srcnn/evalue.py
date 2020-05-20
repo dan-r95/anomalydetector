@@ -30,8 +30,8 @@ import time
 import json
 import argparse
 from msanomalydetector.spectral_residual import SpectralResidual
-from srcnn.utils import *
-
+from utils import *
+#from srcnn.utils import *
 
 def auto():
     path_auto = os.getcwd() + '/auto.json'

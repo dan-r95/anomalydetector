@@ -32,7 +32,8 @@ import torch.utils.data as data
 from torch.autograd import Variable
 from tqdm import tqdm
 from torch.utils.data import Dataset
-from srcnn.net import *
+#from srcnn.net import *
+from utils import *
 import json
 from msanomalydetector.util import average_filter
 from msanomalydetector.spectral_residual import SpectralResidual
